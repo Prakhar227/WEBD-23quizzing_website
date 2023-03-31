@@ -1,0 +1,18 @@
+ *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:cursive ;
+    font-weight: 300;
+ }
+ .container{
+   
+    width: 100vw;
+    min-height: 100vh ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: rgb(183, 235, 236); */
+    background-image: linear-gradient(to right, #345b34, #4b815c, #63a887, #7cd2b6, #98fce9);
+    padding: 2rem;
+ }
