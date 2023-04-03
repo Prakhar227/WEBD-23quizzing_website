@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welcome</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" href="fn.css">
+</head>
+
+<body>
+   <nav class="navbar navbar-expand-lg " style="background-color: #e3f2fd;" >
+    <div class="container-fluid">
+      <a class="navbar-brand" >Welcome to Quizzer</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+ 
+    </div>
+  </nav>
+  <div class="container">
+
+    <div class="info">
+      <h4 class="info">Before entering the quiz arena, here are some general instructions:</h4>
+      <ul>
+        <li>The quiz will consist of 10 questions.</li>
+        <li>Questions will be based on basic knowledge of Web Development.</li>
+        <li>There would be a timer of 5 minutes from the start of quiz</li>
+      </ul>
+      <button class="btn-info" id="proceed">Give Quiz</button>
+      <button class="btn-info" id="create">Create Quiz</button>
+
+    </div>
+
+  </div>
+  <script src="f3.js"></script>
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.17.2/firebase-app.js";
+    import { getAuth, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/9.17.2/firebase-auth.js";
+
+    const firebaseConfig = {
+      apiKey: "AIzaSyBWq6n22TMQ2ebGC9bFHRIgc7nCbF6emSc",
+      authDomain: "quizzer-32695.firebaseapp.com",
+      databaseURL: "https://quizzer-32695-default-rtdb.firebaseio.com",
+      projectId: "quizzer-32695",
+      storageBucket: "quizzer-32695.appspot.com",
+      messagingSenderId: "892772982272",
+      appId: "1:892772982272:web:e1f85eed77d92b67f402e5",
+      measurementId: "G-0ZSJ9CZQTH"
+    };
+
+    const app = initializeApp(firebaseConfig);
+    const auth = getAuth();
+    onAuthStateChanged(auth, (user) => {
+            if (user) {}
+            else{
+              location.replace("index.html")
+            }
+          })
+   </script>
+</body>
+
+</html>
